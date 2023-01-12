@@ -19,15 +19,15 @@ class CreateServicesTable extends Migration
             $table->string('service_name');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->longtext('description');
+            $table->longText('description');
             $table->string('price')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            
+
 
             $table->timestamps();
-        
+
         });
     }
 
